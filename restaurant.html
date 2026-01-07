@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Restaurant</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Lightbox (cool gallery) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+</head>
+
+<body>
+  <!-- Sticky top bar (MATCHES index.html) -->
+  <div class="topbar">
+    <div class="container topbar-row">
+      <div class="brand">
+        <img class="brand-logo" src="img/logo.jpg" alt="Rent a Car Lina" />
+        <span class="brand-text">Lina Rent a Car & Restaurant</span>
+      </div>
+
+      <div class="hotline">
+        <a class="btn btn-call" href="tel:+38348411888" aria-label="Call us">
+          <i class="ph ph-phone" style="color: #0b0e13;"></i><span class="btn-text">048 411 888</span>
+        </a>
+        <a class="btn btn-ghost" href="https://wa.me/38348411888" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <i class="ph ph-whatsapp-logo"></i><span class="btn-text">WhatsApp</span>
+        </a>
+        <a class="btn btn-ghost" href="viber://chat?number=%2B38348411888" aria-label="Viber">
+          <i class="ph ph-chat-circle-dots"></i><span class="btn-text">Viber</span>
+        </a>
+        <a class="btn btn-ghost" href="https://m.me/rentacarlina" target="_blank" rel="noopener" aria-label="Messenger">
+          <i class="ph ph-messenger-logo"></i><span class="btn-text">Messenger</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Center tabs (your current style) -->
+    <div class="page-tabs">
+      <a href="index.html" class="page-tab">Rent a Car</a>
+      <a href="restaurant.html" class="page-tab active">Restaurant</a>
+    </div>
+  </div>
+
+  <!-- Restaurant hero -->
+  <header class="hero">
+    <h1>Restaurant Lina</h1>
+    <p>Shije cilësore, atmosferë e ngrohtë familjare - Fushë Kosovë, Prishtinë.</p>
+  </header>
+
+  <div class="section-title">
+    <h2>Galeria</h2>
+    <!-- Optional: set your real restaurant instagram here -->
+    <a class="btn btn-ghost" href="https://www.instagram.com/rentacarlina" target="_blank" rel="noopener">
+      <i class="ph ph-instagram-logo"></i><span class="btn-text">Instagram</span>
+    </a>
+  </div>
+
+  <!-- NEW: Editorial mosaic gallery (bigger + different layout) -->
+<section class="restaurant-mosaic-8" id="restaurantGallery">
+  <a class="shot g1 glightbox" href="img/r1.jpeg" data-gallery="resto"><img src="img/r1.jpeg" alt=""></a>
+  <a class="shot g2 glightbox" href="img/r2.jpeg" data-gallery="resto"><img src="img/r2.jpeg" alt=""></a>
+  <a class="shot g3 glightbox" href="img/r3.jpeg" data-gallery="resto"><img src="img/r3.jpeg" alt=""></a>
+  <a class="shot g4 glightbox" href="img/r4.jpeg" data-gallery="resto"><img src="img/r4.jpeg" alt=""></a>
+  <a class="shot g5 glightbox" href="img/r5.jpeg" data-gallery="resto"><img src="img/r5.jpeg" alt=""></a>
+  <a class="shot g6 glightbox" href="img/r6.jpeg" data-gallery="resto"><img src="img/r6.jpeg" alt=""></a>
+  <a class="shot g7 glightbox" href="img/r7.jpeg" data-gallery="resto"><img src="img/r7.jpeg" alt=""></a>
+  <a class="shot g8 glightbox" href="img/r8.jpeg" data-gallery="resto"><img src="img/r8.jpeg" alt=""></a>
+</section>
+
+
+
+
+  <!-- Contact (keep simple; you can later customize restaurant address) -->
+  <section class="contact">
+    <div class="wrap">
+      <h2>Kontakt</h2>
+      <p><i class="ph ph-phone"></i> 048 411 888</p>
+      <p><i class="ph ph-envelope"></i> linarent2014@gmail.com</p>
+      <p><i class="ph ph-map-pin"></i> Rr. Xhemajl Mustafa, Fushë Kosovë - Prishtinë</p>
+
+      <div class="map-frame">
+        <iframe
+          src="https://www.google.com/maps?output=embed&q=Rent%20a%20Car%20Lina%2C%2042%2C%202%20Xhemajl%20Mustafa%2C%20Fush%C3%AB%20Kosov%C3%AB%2012000&z=15"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <div class="social">
+        <a href="https://www.facebook.com/rentacarlina" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+        <a href="https://m.me/rentacarlina" aria-label="Messenger"><i class="ph ph-messenger-logo"></i></a>
+        <a href="https://wa.me/38348411888" aria-label="WhatsApp"><i class="ph ph-whatsapp-logo"></i></a>
+        <a href="https://www.instagram.com/rentacarlina" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Rent a Car Lina. Të gjitha të drejtat e rezervuara.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Lightbox
+    GLightbox({
+      selector: '.glightbox',
+      touchNavigation: true,
+      loop: true
+    });
+
+    // Optional: subtle reveal animation (no extra library)
+    const items = document.querySelectorAll('.shot');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('is-visible');
+      });
+    }, { threshold: 0.12 });
+
+    items.forEach(i => obs.observe(i));
+  </script>
+</body>
+</html>
