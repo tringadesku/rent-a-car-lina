@@ -1,8 +1,33 @@
 <!DOCTYPE html>
 <html lang="sq">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Basic Meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Lina Rent a Car & Restaurant në Fushë Kosovë, Prishtinë. Vetura me qira, shërbim i shpejtë dhe i besueshëm, si dhe restaurant familjar me ambient të ngrohtë dhe shije cilësore.">
+  <meta name="keywords"
+    content="Rent a Car Lina, Lina Restaurant, Rent a Car Fushë Kosovë, Restaurant Fushë Kosovë, Vetura me qira Prishtinë, Restaurant familjar Prishtinë">
+  <meta name="author" content="Lina Rent a Car & Restaurant">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="img/logo-square.jpg">
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:title" content="Lina Rent a Car & Restaurant">
+  <meta property="og:description"
+    content="Vetura me qira dhe restaurant familjar në Fushë Kosovë, Prishtinë. Shërbim i shpejtë, i besueshëm dhe ambient i ngrohtë.">
+  <meta property="og:image" content="img/logo.jpg">
+  <meta property="og:type" content="business.business">
+  <meta property="og:locale" content="sq_AL">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lina Rent a Car & Restaurant">
+  <meta name="twitter:description" content="Rent a Car dhe Restaurant familjar në Fushë Kosovë, Prishtinë.">
+  <meta name="twitter:image" content="img/logo.jpg">
+
   <title>Rent a Car Lina & Restaurant</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -73,8 +98,7 @@
       <div class="map-frame">
         <iframe
           src="https://www.google.com/maps?output=embed&q=Rent%20a%20Car%20Lina%2C%2042%2C%202%20Xhemajl%20Mustafa%2C%20Fush%C3%AB%20Kosov%C3%AB%2012000&z=15"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
 
@@ -88,7 +112,7 @@
   </section>
 
   <footer>
-    © <span id="year"></span> Rent a Car Lina. Të gjitha të drejtat e rezervuara.
+    © <span id="year"></span> Lina Rent a Car & Restaurant. Të gjitha të drejtat e rezervuara.
   </footer>
 
   <!-- FIX: Script moved to bottom + waits for DOM -->
@@ -125,18 +149,18 @@
     });
   </script>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  fetch("./cars.json")
-    .then(res => res.json())
-    .then(data => {
-      const container = document.getElementById("carsContainer");
-      container.innerHTML = "";
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("./cars.json")
+        .then(res => res.json())
+        .then(data => {
+          const container = document.getElementById("carsContainer");
+          container.innerHTML = "";
 
-      (data.cars || []).forEach(car => {
-        const card = document.createElement("article");
-        card.className = "car-card";
-        card.innerHTML = `
+          (data.cars || []).forEach(car => {
+            const card = document.createElement("article");
+            card.className = "car-card";
+            card.innerHTML = `
           <div class="media"><img src="${car.image}" alt="${car.name}"></div>
           <h3>${car.name}</h3>
           <div class="specs">
@@ -144,22 +168,23 @@ document.addEventListener("DOMContentLoaded", () => {
             <span class="badge">${car.fuel}</span>
           </div>
         `;
-        container.appendChild(card);
-      });
+            container.appendChild(card);
+          });
 
-      // NEW: reveal animation for car cards
-      const items = document.querySelectorAll(".car-card");
-      const obs = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-          if (e.isIntersecting) e.target.classList.add("is-visible");
-        });
-      }, { threshold: 0.12 });
+          // NEW: reveal animation for car cards
+          const items = document.querySelectorAll(".car-card");
+          const obs = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+              if (e.isIntersecting) e.target.classList.add("is-visible");
+            });
+          }, { threshold: 0.12 });
 
-      items.forEach(i => obs.observe(i));
-    })
-    .catch(err => console.error("Failed to load cars:", err));
-});
-</script>
+          items.forEach(i => obs.observe(i));
+        })
+        .catch(err => console.error("Failed to load cars:", err));
+    });
+  </script>
 
 </body>
+
 </html>

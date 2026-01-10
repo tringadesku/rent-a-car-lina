@@ -411,3 +411,60 @@
   box-shadow: var(--shadow);
 }
 
+
+
+/* Galeria / Meny sub-tabs */
+.subtabs{
+  display:flex;
+  gap:22px;
+  align-items:baseline;
+}
+
+.subtab{
+  background: none;
+  border: none;
+  padding: 0 0 6px;
+  color: var(--muted);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+}
+
+.subtab:hover{ color: var(--text); }
+
+.subtab.active{
+  color: var(--gold);
+}
+
+.subtab.active::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  height:2px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-2));
+  border-radius:2px;
+}
+
+/* Show/hide panels */
+.panel{ display:none; }
+.panel.is-active{ display:block; }
+
+/* Menu image */
+.menu-wrap{
+  width: var(--container);
+  margin: 0 auto 28px;
+  padding: 14px;
+}
+
+.menu-img{
+  width: 100%;
+  max-width: 900px;
+  display:block;
+  margin: 0 auto;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  object-fit: contain;
+}

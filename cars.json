@@ -5,14 +5,14 @@
       "name": "Audi Q5",
       "image": "img/audiq5.jpg",
       "transmission": "Automatik",
-      "fuel": "Benzinë"
+      "fuel": "Naftë"
     },
     {
       "id": 2,
       "name": "Audi A4",
       "image": "img/audia4.jpg",
       "transmission": "Automatik",
-      "fuel": "Benzinë"
+      "fuel": "Naftë"
     },
     {
       "id": 3,
@@ -40,35 +40,35 @@
       "name": "Golf 6 GTD MTM",
       "image": "img/golf6gtd.jpg",
       "transmission": "Automatik",
-      "fuel": "Benzinë"
+      "fuel": "Naftë"
     },
     {
       "id": 5,
       "name": "Golf 6 Style",
       "image": "img/golf6.jpg",
       "transmission": "Automatik",
-      "fuel": "Benzinë"
+      "fuel": "Naftë"
     },
     {
       "id": 5,
       "name": "Golf 6 R-Line",
       "image": "img/golf6r-line.jpg",
       "transmission": "Automatik",
-      "fuel": "Benzinë"
+      "fuel": "Naftë"
     },
     {
       "id": 6,
       "name": "Golf 7 R-Line",
       "image": "img/golf7.jpg",
       "transmission": "Automatik",
-      "fuel": "Benzinë"
+      "fuel": "Naftë"
     },
     {
       "id": 6,
       "name": "VW Touran",
       "image": "img/touran.jpg",
       "transmission": "Automatik",
-      "fuel": "Benzinë"
+      "fuel": "Naftë"
     },
     {
       "id": 7,
@@ -82,21 +82,21 @@
       "name": "Ford Tourneo",
       "image": "img/tourneo.jpg",
       "transmission": "Automatik",
-      "fuel": "Benzinë"
+      "fuel": "Naftë"
     },
     {
       "id": 6,
       "name": "Smart",
       "image": "img/smart.jpg",
       "transmission": "Manual",
-      "fuel": "Naftë"
+      "fuel": "Benzinë"
     },
     {
       "id": 6,
       "name": "ATV Loncin 700CC",
       "image": "img/atv.jpg",
       "transmission": "Automatik",
-      "fuel": "Benzinë"
+      "fuel": "Naftë"
     }
 
   ]
