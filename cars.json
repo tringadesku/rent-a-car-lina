@@ -40,35 +40,35 @@
       "name": "Golf 6 GTD MTM",
       "image": "img/golf6gtd.jpg",
       "transmission": "Automatik",
-      "fuel": "Diesel"
+      "fuel": "2.0 Diesel"
     },
     {
       "id": 5,
       "name": "Golf 6 Style",
       "image": "img/golf6.jpg",
       "transmission": "Automatik",
-      "fuel": "Diesel"
+      "fuel": "2.0 Diesel"
     },
     {
       "id": 5,
       "name": "Golf 6 R-Line",
       "image": "img/golf6r-line.jpg",
       "transmission": "Automatik",
-      "fuel": "Diesel"
+      "fuel": "2.0 Diesel"
     },
     {
       "id": 6,
       "name": "Golf 7 R-Line",
       "image": "img/golf7.jpg",
       "transmission": "Automatik",
-      "fuel": "Diesel"
+      "fuel": "2.0 Diesel"
     },
     {
       "id": 6,
       "name": "VW Touran",
       "image": "img/touran.jpg",
       "transmission": "Automatik",
-      "fuel": "Diesel"
+      "fuel": "2.0 Diesel"
     },
     {
       "id": 7,
@@ -82,7 +82,7 @@
       "name": "Ford Tourneo",
       "image": "img/tourneo.jpg",
       "transmission": "Manual",
-      "fuel": "Diesel"
+      "fuel": "2.0 Diesel"
     },
     {
       "id": 6,
@@ -96,7 +96,7 @@
       "name": "ATV Loncin 700CC",
       "image": "img/atv.jpg",
       "transmission": "Automatik",
-      "fuel": "Diesel"
+      "fuel": "Benzinë"
     }
 
   ]
