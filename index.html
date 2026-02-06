@@ -87,6 +87,22 @@
     <!-- Cars will be injected here from cars.json -->
   </section>
 
+  <!-- Section: Tjera -->
+<div class="section-title">
+  <h2>Tjera</h2>
+</div>
+
+<section class="others">
+  <article class="other-card">
+    <img src="img/other.jpeg" loading="lazy">
+  </article>
+
+  <article class="other-card">
+    <img src="img/other2.jpeg" loading="lazy">
+  </article>
+</section>
+
+
   <!-- Contact / details -->
   <section class="contact">
     <div class="wrap">
@@ -175,7 +191,7 @@
           });
 
           // NEW: reveal animation for car cards
-          const items = document.querySelectorAll(".car-card");
+          const items = document.querySelectorAll(".car-card, .other-card");
           const obs = new IntersectionObserver((entries) => {
             entries.forEach(e => {
               if (e.isIntersecting) e.target.classList.add("is-visible");

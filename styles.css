@@ -468,3 +468,48 @@
   box-shadow: var(--shadow);
   object-fit: contain;
 }
+
+
+/* ===== Tjera Section ===== */
+.others{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:14px;
+  padding:14px;
+  max-width:var(--container);
+  margin:0 auto 28px;
+}
+
+.other-card{
+  background:#161b22;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+
+  aspect-ratio:16/10; /* card defines the size */
+}
+
+/* image fills the card */
+.other-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* Mobile: 1 per row */
+@media (max-width:700px){
+  .others{ grid-template-columns:1fr; }
+}
+
+/* ===== Fade-in reveal (Tjera) ===== */
+.other-card{
+  opacity:0;
+  transform: translateY(10px);
+  transition: opacity .5s ease, transform .5s ease;
+}
+
+.other-card.is-visible{
+  opacity:1;
+  transform: translateY(0);
+}
